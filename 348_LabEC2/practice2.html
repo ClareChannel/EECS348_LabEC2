@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color and Border Width Changer</title> <!-- title -->
+    <style>
+        body { <!-- style setup -->
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #colorChanger {
+            margin-top: 20px;
+        }
+        #outputParagraph {
+            padding: 10px;
+            border: 1px solid #000;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Color and Border Width Changer</h1> <!-- header -->
+    <label for="colorInput">Enter RGB color (e.g., "255, 0, 0"): </label> <!-- color input label -->
+    <input type="text" id="colorInput" placeholder="RGB Color"> <!-- input -->
+    <br>
+    <label for="borderWidthInput">Enter Border Width (in pixels): </label> <!-- pixel label -->
+    <input type="number" id="borderWidthInput" placeholder="Border Width"> <!-- input -->
+    <br>
+    <button onclick="changeColorAndBorder()">Apply</button> <!-- apply button -->
+    <!-- paragraph -->
+    <p id="outputParagraph">There are usually about 200 words in a paragraph, but this can vary widely. Most paragraphs focus on a single idea that's expressed with an introductory sentence, then followed by two or more supporting sentences about the idea. A short paragraph may not reach even 50 words while long paragraphs can be over 400 words long, but generally speaking they tend to be approximately 200 words in length.</p>
+
+    <script>
+        function changeColorAndBorder() {
+            const colorInput = document.getElementById("colorInput").value; //apply input value to color
+            const borderWidthInput = document.getElementById("borderWidthInput").value; //apply input value to boarder
+            const outputParagraph = document.getElementById("outputParagraph"); //apply input value to paragraph
+
+            outputParagraph.style.backgroundColor = `rgb(${colorInput})`; //output with color
+            outputParagraph.style.borderWidth = `${borderWidthInput}px`; //output wiht boarder
+        }
+    </script>
+</body>
+</html>

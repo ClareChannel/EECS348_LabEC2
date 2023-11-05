@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Verification</title> <!-- title -->
+</head>
+<body>
+    <h1>Password Verification</h1> <!-- header-->
+    <label for="password1">Enter Password: </label> <!-- password1 label -->
+    <input type="password" id="password1" placeholder="Password"> <!-- password1 input holder -->
+    <br>
+    <label for="password2">Re-enter Password: </label> <!-- passwords label -->
+    <input type="password" id="password2" placeholder="Re-enter Password"> <!-- password2 input holder -->
+    <br>
+    <button onclick="verifyPasswords()">Verify Passwords</button> <!-- verify button -->
+
+    <script> //verify password function
+        function verifyPasswords() {
+            const password1 = document.getElementById("password1").value; //taek first input
+            const password2 = document.getElementById("password2").value; //take second input
+
+            if (password1.length < 8) { //if password in less than 8 characters
+                alert("Password must be at least eight characters long."); //error message
+            } else if (password1 !== password2) { //if they are not the same
+                alert("Passwords do not match. Please try again."); //error message
+            } else { //otherwise
+                alert("Passwords match!"); //match message
+            }
+        }
+    </script>
+</body>
+</html>

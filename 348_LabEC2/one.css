@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #154;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.profile {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.professional-info, .videos {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
